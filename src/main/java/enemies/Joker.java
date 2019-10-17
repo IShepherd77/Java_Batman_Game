@@ -21,9 +21,14 @@ public class Joker extends Enemy implements IVillain {
         setHealthPoints(newHealthPoints);
     }
 
-    public void attack(IHero hero){
+    public String attack(IHero hero){
         int damagePoints = this.weapon.attackPoints();
         hero.takeDamage(damagePoints);
+        String attackMsg = weapon.getSound().toUpperCase() + ", " + getName() + " has Attacked " + hero.getName() + " with " +
+                weapon.getName()+ ". " + hero.getName() + " lost " +
+                weapon.attackPoints() + " health points. " + hero.getName()
+                + "'s remaining health points is " + hero.getHealthPoints() ;
+        return attackMsg;
     }
 
     public String getName(){

@@ -1,0 +1,35 @@
+import behaviours.IHero;
+import behaviours.IVillain;
+import enemies.Joker;
+import enemies.Penguin;
+import heroes.Batman;
+import other.Arena;
+import other.Game;
+
+public class Runner {
+
+    public static void main(String[] args) {
+
+        IHero batman = new Batman();
+        IVillain joker = new Joker();
+        IVillain penguin = new Penguin();
+        Arena arena = new Arena("Bat Cave");
+        Game game = new Game(batman, joker, arena);
+
+        System.out.println(game.startGame());
+//
+//        System.out.println(game.heroAttackVillain());
+//        System.out.println(game.heroAttackVillain());
+//        System.out.println(game.heroAttackVillain());
+//        System.out.println(game.heroAttackVillain());
+//        System.out.println(game.heroAttackVillain());
+//        System.out.println(game.heroAttackVillain());
+//        System.out.println(game.heroAttackVillain());
+//        System.out.println(game.heroAttackVillain());
+
+        System.out.println(game.villainAttackhero());
+        System.out.println(game.villainAttackhero());
+        System.out.println(game.villainAttackhero());
+
+    }
+}

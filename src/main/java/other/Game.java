@@ -16,8 +16,27 @@ public class Game {
 
     }
 
-    public String heroAttackVillian(){
-        return hero.attack(villain);
+    public String startGame(){
+        return hero.getName() + " met " + villain.getName() +
+                " in " + arena.getArenaName() + "and they will FIGHT !!!!! (cheers for batman)";
+    }
+
+    public String heroAttackVillain(){
+        if (villain.getHealthPoints() > 0) {
+            return hero.attack(villain);
+        } else {
+            return hero.getName() + "Wins , WOOOP WOOOOP" ;
+        }
+    }
+
+    public String villainAttackhero(){
+        if (hero.getHealthPoints() > 0) {
+            return villain.attack(hero);
+        } else {
+            return villain.getName() + "wins , boooo";
+        }
+
+
     }
 
 

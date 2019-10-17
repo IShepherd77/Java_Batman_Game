@@ -17,4 +17,6 @@ public abstract class Enemy {
     public void setHealthPoints(int newHealthPoints){
         this.healthPoints = newHealthPoints;
     }
+
+
 }

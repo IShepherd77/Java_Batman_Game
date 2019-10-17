@@ -1,4 +1,6 @@
+import behaviours.IHero;
 import enemies.Penguin;
+import heroes.Batman;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,10 +9,12 @@ import static org.junit.Assert.assertEquals;
 public class PenguinTest {
 
     Penguin penguin;
+    IHero batman;
 
     @Before
     public void before(){
         penguin = new Penguin();
+        batman = new Batman();
     }
 
     @Test
@@ -26,6 +30,7 @@ public class PenguinTest {
 
     @Test
     public void hasAttackAffect(){
-        assertEquals(20, penguin.attack());
+        penguin.attack(batman);
+        assertEquals(180, batman.getHealthPoints());
     }
 }
