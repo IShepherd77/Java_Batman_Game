@@ -1,17 +1,14 @@
 package weapons;
 
-import behaviours.IWeapon;
-
-public class Batarang implements IWeapon {
+public class Kick {
 
     private int damagePoints;
 
-    public Batarang(){
-        this.damagePoints = 10;
+    public Kick(){
+        this.damagePoints = 8;
     }
 
     public int attackPoints(){
         return this.damagePoints;
     }
-
 }

@@ -2,16 +2,15 @@ package weapons;
 
 import behaviours.IWeapon;
 
-public class Batarang implements IWeapon {
+public class Punch implements IWeapon {
 
     private int damagePoints;
 
-    public Batarang(){
-        this.damagePoints = 10;
+    public Punch(){
+        this.damagePoints = 5;
     }
 
     public int attackPoints(){
         return this.damagePoints;
     }
-
 }
