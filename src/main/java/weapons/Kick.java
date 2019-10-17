@@ -1,6 +1,8 @@
 package weapons;
 
-public class Kick {
+import behaviours.IWeapon;
+
+public class Kick implements IWeapon {
 
     private int damagePoints;
 
