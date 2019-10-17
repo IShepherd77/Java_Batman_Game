@@ -1,9 +1,10 @@
 package enemies;
 
+import behaviours.IVillain;
 import behaviours.IWeapon;
 import weapons.PenguinUmbrella;
 
-public class Penguin extends Enemy{
+public class Penguin extends Enemy implements IVillain {
 
     private IWeapon weapon;
 
@@ -13,8 +14,8 @@ public class Penguin extends Enemy{
         this.weapon = new PenguinUmbrella();
     }
 
-    public void takeDamage(){
-        int newHealthPoints = getHealthPoints() -5;
+    public void takeDamage(int damagePoints){
+        int newHealthPoints = getHealthPoints() - damagePoints;
         setHealthPoints(newHealthPoints);
     }
 

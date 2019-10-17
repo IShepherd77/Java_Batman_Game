@@ -1,3 +1,4 @@
+import enemies.Joker;
 import heroes.Batman;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,10 +8,12 @@ import static org.junit.Assert.assertEquals;
 public class BatmanTest {
 
     Batman batman;
+    Joker joker;
 
     @Before
     public void before(){
         batman = new Batman();
+        joker = new Joker();
     }
 
     @Test
@@ -31,6 +34,7 @@ public class BatmanTest {
 
     @Test
     public void hasAttackEffect(){
-        assertEquals(8, batman.attack(), 3);
+        batman.attack(joker);
+        assertEquals(92, joker.getHealthPoints(), 3);
     }
 }

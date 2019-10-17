@@ -20,7 +20,7 @@ public class PenguinTest {
 
     @Test
     public void hasDamageAffect(){
-        penguin.takeDamage();
+        penguin.takeDamage(5);
         assertEquals(70, penguin.getHealthPoints());
     }
 

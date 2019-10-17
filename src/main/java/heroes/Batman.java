@@ -1,5 +1,7 @@
 package heroes;
 
+import behaviours.IHero;
+import behaviours.IVillain;
 import behaviours.IWeapon;
 import weapons.Batarang;
 import weapons.Kick;
@@ -8,7 +10,7 @@ import weapons.Punch;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Batman extends Player{
+public class Batman extends Player implements IHero {
 
     private ArrayList<IWeapon> weapons;
     private Batarang batarang = new Batarang();
@@ -26,11 +28,17 @@ public class Batman extends Player{
         this.weapons.add(punch);
     }
 
-    public int attack(){
+    public void attack(IVillain enemy){
         addWeapons();
         Random random = new Random();
         IWeapon attackingWeapon = this.weapons.get(random.nextInt(weapons.size()));
-        return attackingWeapon.attackPoints();
+        int damagePoints = attackingWeapon.attackPoints();
+        enemy.takeDamage(damagePoints);
+    }
+
+    public void takeDamage(int damagePoints){
+        int newHealthPoints = getHealthPoints() - damagePoints;
+        setHealthPoints(newHealthPoints);
     }
 
     public int getWeaponsCount(){

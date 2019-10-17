@@ -1,5 +1,6 @@
 package enemies;
 
+
 public abstract class Enemy {
     private int healthPoints;
 
@@ -7,7 +8,7 @@ public abstract class Enemy {
         this.healthPoints = healthPoints;
     }
 
-    public abstract void takeDamage();
+    public abstract void takeDamage(int damagePoints);
 
     public int getHealthPoints(){
         return this.healthPoints;

@@ -1,9 +1,11 @@
 package enemies;
 
+import behaviours.IHero;
+import behaviours.IVillain;
 import behaviours.IWeapon;
 import weapons.JokerCane;
 
-public class Joker extends Enemy {
+public class Joker extends Enemy implements IVillain {
 
     private IWeapon weapon;
 
@@ -12,12 +14,13 @@ public class Joker extends Enemy {
         this.weapon = new JokerCane();
     }
 
-    public void takeDamage(){
-        int newHealthPoints = getHealthPoints() - 5;
+    public void takeDamage(int damagePoints){
+        int newHealthPoints = getHealthPoints() - damagePoints;
         setHealthPoints(newHealthPoints);
     }
 
-    public int attack(){
-        return this.weapon.attackPoints();
+    public void attack(IHero hero){
+        int damagePoints = this.weapon.attackPoints();
+        hero.takeDamage(damagePoints);
     }
 }
