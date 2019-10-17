@@ -24,4 +24,9 @@ public class JokerTest {
         assertEquals(95, joker.getHealthPoints());
     }
 
+    @Test
+    public void hasAttackEffect(){
+        assertEquals(15, joker.attack());
+    }
+
 }

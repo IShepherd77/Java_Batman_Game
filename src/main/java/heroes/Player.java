@@ -1,3 +1,5 @@
+package heroes;
+
 public abstract class Player {
     private String name;
     private int healthPoints;

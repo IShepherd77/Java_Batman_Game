@@ -15,6 +15,6 @@ public class PenguinUmbrellaTest {
 
     @Test
     public void hasDamagePoints(){
-        assertEquals(20, penguinUmbrella.attack());
+        assertEquals(20, penguinUmbrella.attackPoints());
     }
 }

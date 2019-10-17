@@ -15,6 +15,6 @@ public class JokerCaneTest {
 
     @Test
       public void hasDamagePoints(){
-        assertEquals(15, jokercane.attack());
+        assertEquals(15, jokercane.attackPoints());
     }
 }

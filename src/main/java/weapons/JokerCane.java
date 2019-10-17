@@ -11,7 +11,7 @@ public class JokerCane implements IWeapon {
 
 
 
-    public int attack() {
+    public int attackPoints() {
         return this.damagePoints;
     }
 }

@@ -23,4 +23,9 @@ public class PenguinTest {
         penguin.takeDamage();
         assertEquals(70, penguin.getHealthPoints());
     }
+
+    @Test
+    public void hasAttackAffect(){
+        assertEquals(20, penguin.attack());
+    }
 }

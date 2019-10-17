@@ -10,7 +10,7 @@ public class PenguinUmbrella implements IWeapon {
         this.damagePoints = 20;
     }
 
-    public int attack(){
+    public int attackPoints(){
         return this.damagePoints;
     }
 
