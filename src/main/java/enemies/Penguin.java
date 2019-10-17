@@ -7,11 +7,13 @@ import weapons.PenguinUmbrella;
 public class Penguin extends Enemy implements IVillain {
 
     private IWeapon weapon;
+    private String name;
 
 
     public Penguin(){
         super(75);
         this.weapon = new PenguinUmbrella();
+        this.name = "The Penguin";
     }
 
     public void takeDamage(int damagePoints){
@@ -23,5 +25,9 @@ public class Penguin extends Enemy implements IVillain {
         return this.weapon.attackPoints();
     }
 
-
+    public String getName(){
+        return this.name;
+    }
 }
+
+

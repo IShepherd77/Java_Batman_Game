@@ -18,7 +18,7 @@ public class Batman extends Player implements IHero {
     private Punch punch = new Punch();
 
     public Batman(){
-        super("Bruce Wayne", 200);
+        super("Bat Man", 200);
         this.weapons = new ArrayList<IWeapon>();
     }
 
@@ -28,12 +28,17 @@ public class Batman extends Player implements IHero {
         this.weapons.add(punch);
     }
 
-    public void attack(IVillain enemy){
+    public String attack(IVillain enemy){
         addWeapons();
         Random random = new Random();
         IWeapon attackingWeapon = this.weapons.get(random.nextInt(weapons.size()));
         int damagePoints = attackingWeapon.attackPoints();
         enemy.takeDamage(damagePoints);
+        String attackMsg = attackingWeapon.getSound() + " " + getName() + " has Attacked " + enemy.getName() + " with " +
+                attackingWeapon.getName()+ " " + enemy.getName() + " lost " +
+                attackingWeapon.attackPoints() + " health points " + enemy.getName()
+                + " the remaining health points is " + enemy.getHealthPoints() ;
+        return attackMsg;
     }
 
     public void takeDamage(int damagePoints){

@@ -18,7 +18,7 @@ public class BatmanTest {
 
     @Test
     public void hasName(){
-        assertEquals("Bruce Wayne", batman.getName());
+        assertEquals("Bat Man", batman.getName());
     }
 
     @Test

@@ -8,10 +8,12 @@ import weapons.JokerCane;
 public class Joker extends Enemy implements IVillain {
 
     private IWeapon weapon;
+    private String name;
 
     public Joker(){
         super(100);
         this.weapon = new JokerCane();
+        this.name = "The Joker";
     }
 
     public void takeDamage(int damagePoints){
@@ -22,5 +24,9 @@ public class Joker extends Enemy implements IVillain {
     public void attack(IHero hero){
         int damagePoints = this.weapon.attackPoints();
         hero.takeDamage(damagePoints);
+    }
+
+    public String getName(){
+        return this.name;
     }
 }

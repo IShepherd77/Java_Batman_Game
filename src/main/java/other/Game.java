@@ -16,5 +16,9 @@ public class Game {
 
     }
 
+    public String heroAttackVillian(){
+        return hero.attack(villain);
+    }
+
 
 }
