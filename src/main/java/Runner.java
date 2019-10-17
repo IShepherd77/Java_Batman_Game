@@ -17,15 +17,15 @@ public class Runner {
         Game game = new Game(batman, joker, arena);
 
         System.out.println(game.startGame());
-//
-//        System.out.println(game.heroAttackVillain());
-//        System.out.println(game.heroAttackVillain());
-//        System.out.println(game.heroAttackVillain());
-//        System.out.println(game.heroAttackVillain());
-//        System.out.println(game.heroAttackVillain());
-//        System.out.println(game.heroAttackVillain());
-//        System.out.println(game.heroAttackVillain());
-//        System.out.println(game.heroAttackVillain());
+
+        System.out.println(game.heroAttackVillain());
+        System.out.println(game.heroAttackVillain());
+        System.out.println(game.heroAttackVillain());
+        System.out.println(game.heroAttackVillain());
+        System.out.println(game.heroAttackVillain());
+        System.out.println(game.heroAttackVillain());
+        System.out.println(game.heroAttackVillain());
+        System.out.println(game.heroAttackVillain());
 
         System.out.println(game.villainAttackhero());
         System.out.println(game.villainAttackhero());

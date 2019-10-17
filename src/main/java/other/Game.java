@@ -25,7 +25,7 @@ public class Game {
         if (villain.getHealthPoints() > 0) {
             return hero.attack(villain);
         } else {
-            return hero.getName() + "Wins , WOOOP WOOOOP" ;
+            return hero.getName() + " Wins , WOOOP WOOOOP" ;
         }
     }
 
@@ -33,7 +33,7 @@ public class Game {
         if (hero.getHealthPoints() > 0) {
             return villain.attack(hero);
         } else {
-            return villain.getName() + "wins , boooo";
+            return villain.getName() + " wins , boooo";
         }
 
 

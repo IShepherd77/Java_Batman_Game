@@ -37,4 +37,13 @@ public class GameTest {
         game.villainAttackhero();
         assertEquals(185, batman.getHealthPoints());
     }
+
+    @Test
+    public void testHeroCanWinAgainstVillain(){
+        game.heroAttackVillain();
+        game.heroAttackVillain();
+        game.heroAttackVillain();
+        game.heroAttackVillain();
+        assertEquals("BatMan Wins , WOOOP WOOOOP", game.heroAttackVillain());
+    }
 }

@@ -11,7 +11,7 @@ public class Joker extends Enemy implements IVillain {
     private String name;
 
     public Joker(){
-        super(100);
+        super(20);
         this.weapon = new JokerCane();
         this.name = "The Joker";
     }
