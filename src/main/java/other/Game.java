@@ -22,18 +22,23 @@ public class Game {
     }
 
     public String heroAttackVillain(){
-        if (villain.getHealthPoints() > 0) {
+        if (villain.getHealthPoints() > 0 && hero.getHealthPoints() > 0) {
             return hero.attack(villain);
-        } else {
+        } else if (hero.getHealthPoints() > 0 && villain.getHealthPoints() <= 0){
             return hero.getName() + " Wins , WOOOP WOOOOP" ;
+        } else {
+            return "";
         }
     }
 
     public String villainAttackhero(){
-        if (hero.getHealthPoints() > 0) {
+
+        if (hero.getHealthPoints() > 0 && villain.getHealthPoints() > 0) {
             return villain.attack(hero);
-        } else {
+        } else if (villain.getHealthPoints() > 0 && hero.getHealthPoints() <= 0){
             return villain.getName() + " wins , boooo";
+        } else {
+            return "";
         }
 
 

@@ -14,7 +14,7 @@ public abstract class Player {
     }
 
     public int getHealthPoints(){
-        return this.healthPoints;
+        return healthPoints > 0 ? healthPoints : 0;
     }
 
     public void setHealthPoints(int newHealthPoints){
