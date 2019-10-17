@@ -18,7 +18,7 @@ public class Game {
 
     public String startGame(){
         return hero.getName() + " met " + villain.getName() +
-                " in " + arena.getArenaName() + "and they will FIGHT !!!!! (cheers for batman)";
+                " in " + arena.getArenaName() + " and they will FIGHT !!!!! (cheers for batman)";
     }
 
     public String heroAttackVillain(){
